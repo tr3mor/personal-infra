@@ -1,6 +1,7 @@
 resource "tfe_workspace" "tfe" {
-  organization = var.org_id
   name         = var.name
+  description  = var.description
+  organization = var.org_id
 
   terraform_version     = var.terraform_version
   working_directory     = var.working_directory
