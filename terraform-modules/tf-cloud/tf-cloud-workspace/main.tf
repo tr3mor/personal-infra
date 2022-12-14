@@ -21,6 +21,7 @@ resource "tfe_workspace" "tfe" {
 }
 
 resource "tfe_notification_configuration" "terraform" {
+  count        = var.notification_enabled ? 1 : 0
   name         = "${var.name}-notification"
   enabled      = var.notification_enabled
   workspace_id = tfe_workspace.tfe.id

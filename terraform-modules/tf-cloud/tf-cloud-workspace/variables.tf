@@ -69,7 +69,3 @@ variable "notification_email_user_ids" {
   type        = list(string)
   description = "List of emails to send notifications to"
 }
-
-
-
-
