@@ -1,7 +1,7 @@
 resource "tfe_workspace" "tfe" {
   name         = var.name
   description  = var.description
-  organization = var.org_id
+  organization = var.org_name
 
   terraform_version     = var.terraform_version
   working_directory     = var.working_directory
@@ -16,6 +16,7 @@ resource "tfe_workspace" "tfe" {
     branch         = var.vcs_repo_branch
     oauth_token_id = var.oauth_token_id
   }
+
   trigger_patterns = var.trigger_patterns
 }
 
