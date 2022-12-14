@@ -1,1 +1,7 @@
+# TF related
 .terraform
+*.tfstate
+*.tfstate.*
+
+# Editor
+.idea

@@ -1,0 +1,34 @@
+---
+name: Terraform - Validate
+on: # yamllint disable-line rule:truthy
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install terraform
+        uses: hashicorp/setup-terraform@v2.0.3
+      - name: Install tflint
+        uses: terraform-linters/setup-tflint@v2
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+      - name: Terraform format
+        run: terraform fmt -check -diff -recursive
+      - name: Run tfling
+        run: |
+          tflint --init
+          TF_DIRS=$(find . -name "*.tf" -not -path "./.git/*" -exec dirname {} \; | sort | uniq)
+          failed=false
+          for dir in $TF_DIRS; do
+              echo "Tflint $dir"
+              tflint "$dir" -f compact || failed=true;
+          done
+          if $failed
+          then
+              exit 1
+            else
+              exit 0
+          fi

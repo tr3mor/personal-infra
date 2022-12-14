@@ -1,0 +1,48 @@
+---
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    open-pull-requests-limit: 10
+    directory: /
+    schedule:
+      time: "16:00"
+      interval: daily
+    allow:
+      - dependency-type: all
+    assignees:
+      - tr3mor
+    reviewers:
+      - tr3mor
+    labels:
+      - dependencies
+      - actions
+  - package-ecosystem: terraform
+    open-pull-requests-limit: 10
+    directory: terraform/tf-cloud/
+    schedule:
+      time: "16:00"
+      interval: daily
+    allow:
+      - dependency-type: all
+    assignees:
+      - tr3mor
+    reviewers:
+      - tr3mor
+    labels:
+      - dependencies
+      - terraform
+  - package-ecosystem: terraform
+    open-pull-requests-limit: 10
+    directory: terraform-modules/tf-cloud/tf-cloud-workspace/
+    schedule:
+      time: "16:00"
+      interval: daily
+    allow:
+      - dependency-type: all
+    assignees:
+      - tr3mor
+    reviewers:
+      - tr3mor
+    labels:
+      - dependencies
+      - terraform
