@@ -3,7 +3,6 @@ variable "name" {
   description = "Name of the workspace"
 }
 
-
 variable "description" {
   type        = string
   default     = ""
