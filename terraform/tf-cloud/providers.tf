@@ -1,4 +1,5 @@
 terraform {
+  required_version = ">= 1.3"
   cloud {
     organization = "tr3mor"
 
@@ -14,5 +15,4 @@ terraform {
   }
 }
 
-provider "tfe" {
-}
+provider "tfe" {}
