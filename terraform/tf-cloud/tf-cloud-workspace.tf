@@ -9,7 +9,7 @@ module "tfe_workspace" {
   vcs_repo_identifier = "tr3mor/personal-infra"
   oauth_token_id      = tfe_oauth_client.github.oauth_token_id
 
-  trigger_patterns = ["/terraform-modules/tfcloud/tf-cloud-workspace"]
+  trigger_patterns = ["/terraform-modules/tf-cloud/tf-cloud-workspace/*.tf"]
 
   notification_email_user_ids = [data.tfe_organization_membership.admin.user_id]
 }
