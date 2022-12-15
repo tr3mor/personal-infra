@@ -39,7 +39,7 @@ No modules.
 | <a name="input_oauth_token_id"></a> [oauth\_token\_id](#input\_oauth\_token\_id) | The VCS Connection to use. This ID can be obtained from a tfe\_oauth\_client resource. | `string` | n/a | yes |
 | <a name="input_org_name"></a> [org\_name](#input\_org\_name) | Organization ID in which workspace should be created | `string` | n/a | yes |
 | <a name="input_terraform_version"></a> [terraform\_version](#input\_terraform\_version) | Terraform version to use for workspace runs | `string` | `"latest"` | no |
-| <a name="input_trigger_patterns"></a> [trigger\_patterns](#input\_trigger\_patterns) | List of glob patterns that describe the files Terraform Cloud monitors for changes | `list(string)` | `[]` | no |
+| <a name="input_trigger_patterns"></a> [trigger\_patterns](#input\_trigger\_patterns) | List of glob patterns that describe the files Terraform Cloud monitors for changes | `list(string)` | `null` | no |
 | <a name="input_vcs_repo_branch"></a> [vcs\_repo\_branch](#input\_vcs\_repo\_branch) | Github branch to watch | `string` | `"main"` | no |
 | <a name="input_vcs_repo_identifier"></a> [vcs\_repo\_identifier](#input\_vcs\_repo\_identifier) | Github repo identifier | `string` | n/a | yes |
 | <a name="input_working_directory"></a> [working\_directory](#input\_working\_directory) | Github repo dir to watch | `string` | n/a | yes |

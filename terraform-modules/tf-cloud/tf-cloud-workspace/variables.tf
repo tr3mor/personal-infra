@@ -55,7 +55,7 @@ variable "oauth_token_id" {
 
 variable "trigger_patterns" {
   type        = list(string)
-  default     = []
+  default     = null
   description = "List of glob patterns that describe the files Terraform Cloud monitors for changes"
 }
 
