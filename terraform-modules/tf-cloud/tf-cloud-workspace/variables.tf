@@ -55,7 +55,7 @@ variable "oauth_token_id" {
 
 variable "trigger_patterns" {
   type        = list(string)
-  default     = []
+  default     = null
   description = "List of glob patterns that describe the files Terraform Cloud monitors for changes"
 }
 
@@ -68,4 +68,10 @@ variable "notification_enabled" {
 variable "notification_email_user_ids" {
   type        = list(string)
   description = "List of emails to send notifications to"
+}
+
+variable "create_variable_set" {
+  type        = bool
+  default     = false
+  description = "Whether variable set should be created for this workspace"
 }
