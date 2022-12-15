@@ -21,13 +21,16 @@ No modules.
 | Name | Type |
 |------|------|
 | [tfe_notification_configuration.terraform](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/notification_configuration) | resource |
+| [tfe_variable_set.varset](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/variable_set) | resource |
 | [tfe_workspace.tfe](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/workspace) | resource |
+| [tfe_workspace_variable_set.ws-varset](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/workspace_variable_set) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_auto_apply"></a> [auto\_apply](#input\_auto\_apply) | Enable autoapply for workspace | `bool` | `true` | no |
+| <a name="input_create_variable_set"></a> [create\_variable\_set](#input\_create\_variable\_set) | Whether variable set should be created for this workspace | `bool` | `false` | no |
 | <a name="input_description"></a> [description](#input\_description) | A description for the workspace | `string` | `""` | no |
 | <a name="input_execution_mode"></a> [execution\_mode](#input\_execution\_mode) | Execution mode for workspace | `string` | `"remote"` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name of the workspace | `string` | n/a | yes |

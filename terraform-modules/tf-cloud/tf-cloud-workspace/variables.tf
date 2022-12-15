@@ -69,3 +69,9 @@ variable "notification_email_user_ids" {
   type        = list(string)
   description = "List of emails to send notifications to"
 }
+
+variable "create_variable_set" {
+  type        = bool
+  default     = false
+  description = "Whether variable set should be created for this workspace"
+}

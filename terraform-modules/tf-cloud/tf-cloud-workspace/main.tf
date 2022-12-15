@@ -33,3 +33,16 @@ resource "tfe_notification_configuration" "terraform" {
     "run:needs_attention",
   ]
 }
+
+resource "tfe_variable_set" "varset" {
+  count        = var.create_variable_set ? 1 : 0
+  name         = "${var.name}-variable-set"
+  description  = "Variable set for ${var.name} workspace"
+  organization = var.org_name
+}
+
+resource "tfe_workspace_variable_set" "ws-varset" {
+  count           = var.create_variable_set ? 1 : 0
+  variable_set_id = tfe_variable_set.varset.id
+  workspace_id    = tfe_workspace.tfe.id
+}
