@@ -12,4 +12,5 @@ module "tfe_workspace" {
   trigger_patterns = ["terraform-modules/tf-cloud/tf-cloud-workspace/*", "terraform/tf-cloud/workspaces/*"]
 
   notification_email_user_ids = [data.tfe_organization_membership.admin.user_id]
+  create_variable_set         = true
 }

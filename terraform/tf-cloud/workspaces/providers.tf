@@ -4,7 +4,7 @@ terraform {
     organization = "tr3mor"
 
     workspaces {
-      name = "tf-cloud"
+      name = "tf-cloud-workspaces"
     }
   }
   required_providers {
