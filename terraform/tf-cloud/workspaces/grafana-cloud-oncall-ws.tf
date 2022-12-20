@@ -1,4 +1,4 @@
-module "grafana_stack_tfe_workspace" {
+module "grafana_oncall_tfe_workspace" {
   source = "../../../terraform-modules/tf-cloud/tf-cloud-workspace"
 
   name        = "grafana-cloud-oncall"
