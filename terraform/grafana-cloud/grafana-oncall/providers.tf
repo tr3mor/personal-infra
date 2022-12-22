@@ -14,3 +14,6 @@ terraform {
     }
   }
 }
+provider "grafana" {
+  oncall_access_token = var.grafana_oncall_token
+}
