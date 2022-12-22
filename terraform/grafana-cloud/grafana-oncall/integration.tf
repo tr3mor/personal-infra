@@ -17,7 +17,7 @@ resource "grafana_oncall_escalation" "notify-user" {
 
 resource "grafana_oncall_integration" "integration" {
   name = "default-integration"
-  type = "grafana"
+  type = "grafana_alerting"
   default_route {
     escalation_chain_id = grafana_oncall_escalation_chain.default.id
   }
