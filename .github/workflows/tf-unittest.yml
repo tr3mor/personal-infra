@@ -36,5 +36,5 @@ jobs:
           TFE_TOKEN: ${{ secrets.TFE_TOKEN }}
         run: |
           for file in ${{ steps.changed-files-specific.outputs.all_changed_files }}; do
-            go test -v -timeout 30m $file/test/
+            go test -v -timeout 30m ./$file/test/
           done
