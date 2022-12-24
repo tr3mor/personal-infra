@@ -34,9 +34,9 @@ No modules.
 | <a name="input_description"></a> [description](#input\_description) | A description for the workspace | `string` | `""` | no |
 | <a name="input_execution_mode"></a> [execution\_mode](#input\_execution\_mode) | Execution mode for workspace | `string` | `"remote"` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name of the workspace | `string` | n/a | yes |
-| <a name="input_notification_email_user_ids"></a> [notification\_email\_user\_ids](#input\_notification\_email\_user\_ids) | List of emails to send notifications to | `list(string)` | n/a | yes |
+| <a name="input_notification_email_user_ids"></a> [notification\_email\_user\_ids](#input\_notification\_email\_user\_ids) | List of emails to send notifications to | `list(string)` | `[]` | no |
 | <a name="input_notification_enabled"></a> [notification\_enabled](#input\_notification\_enabled) | Whether email notification should be enabled for this workspace | `bool` | `true` | no |
-| <a name="input_oauth_token_id"></a> [oauth\_token\_id](#input\_oauth\_token\_id) | The VCS Connection to use. This ID can be obtained from a tfe\_oauth\_client resource. | `string` | n/a | yes |
+| <a name="input_oauth_token_id"></a> [oauth\_token\_id](#input\_oauth\_token\_id) | The VCS Connection to use. This ID can be obtained from a tfe\_oauth\_client resource | `string` | n/a | yes |
 | <a name="input_org_name"></a> [org\_name](#input\_org\_name) | Organization ID in which workspace should be created | `string` | n/a | yes |
 | <a name="input_terraform_version"></a> [terraform\_version](#input\_terraform\_version) | Terraform version to use for workspace runs | `string` | `"latest"` | no |
 | <a name="input_trigger_patterns"></a> [trigger\_patterns](#input\_trigger\_patterns) | List of glob patterns that describe the files Terraform Cloud monitors for changes | `list(string)` | `null` | no |

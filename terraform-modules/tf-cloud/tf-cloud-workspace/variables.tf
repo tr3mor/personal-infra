@@ -50,7 +50,8 @@ variable "vcs_repo_branch" {
 
 variable "oauth_token_id" {
   type        = string
-  description = "The VCS Connection to use. This ID can be obtained from a tfe_oauth_client resource."
+  description = "The VCS Connection to use. This ID can be obtained from a tfe_oauth_client resource"
+  sensitive   = true
 }
 
 variable "trigger_patterns" {
@@ -67,6 +68,7 @@ variable "notification_enabled" {
 
 variable "notification_email_user_ids" {
   type        = list(string)
+  default     = []
   description = "List of emails to send notifications to"
 }
 
