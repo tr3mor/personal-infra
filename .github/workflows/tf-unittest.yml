@@ -15,6 +15,8 @@ jobs:
         id: changed-files-specific
         uses: tj-actions/changed-files@v35
         with:
+          dir_names: "true"
+          dir_names_max_depth: "3"
           files: |
             terraform-modules/**
       - name: Install terraform
