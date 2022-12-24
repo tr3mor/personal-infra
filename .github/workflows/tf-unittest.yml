@@ -32,7 +32,9 @@ jobs:
         run: go mod tidy
       - name: Perform unittest
         if: steps.changed-files-specific.outputs.any_changed == 'true'
+        env:
+          TFE_TOKEN: ${{ secrets.TFE_TOKEN }}
         run: |
           for file in ${{ steps.changed-files-specific.outputs.all_changed_files }}; do
-            echo "$file was changed"
+            go test -v -timeout 30m $file/test/
           done
