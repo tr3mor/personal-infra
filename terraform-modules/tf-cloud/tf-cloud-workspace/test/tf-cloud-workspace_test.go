@@ -77,7 +77,7 @@ func TestTfCloudWorkspace(t *testing.T) {
 		if ws.Locked == false {
 			break
 		} else {
-			time.Sleep(15 * time.Second)
+			time.Sleep(30 * time.Second)
 		}
 	}
 }
