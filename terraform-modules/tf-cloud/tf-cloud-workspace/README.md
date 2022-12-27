@@ -23,7 +23,7 @@ No modules.
 | [tfe_notification_configuration.terraform](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/notification_configuration) | resource |
 | [tfe_variable_set.varset](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/variable_set) | resource |
 | [tfe_workspace.tfe](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/workspace) | resource |
-| [tfe_workspace_variable_set.ws-varset](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/workspace_variable_set) | resource |
+| [tfe_workspace_variable_set.ws_varset](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/workspace_variable_set) | resource |
 
 ## Inputs
 
