@@ -6,7 +6,7 @@ data "grafana_oncall_user" "tr3mor" {
   username = "tr3mor"
 }
 
-resource "grafana_oncall_escalation" "notify-user" {
+resource "grafana_oncall_escalation" "notify_user" {
   escalation_chain_id = grafana_oncall_escalation_chain.default.id
   type                = "notify_persons"
   persons_to_notify = [

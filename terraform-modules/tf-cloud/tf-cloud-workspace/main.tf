@@ -41,7 +41,7 @@ resource "tfe_variable_set" "varset" {
   organization = var.org_name
 }
 
-resource "tfe_workspace_variable_set" "ws-varset" {
+resource "tfe_workspace_variable_set" "ws_varset" {
   count           = var.create_variable_set ? 1 : 0
   variable_set_id = tfe_variable_set.varset[0].id
   workspace_id    = tfe_workspace.tfe.id
