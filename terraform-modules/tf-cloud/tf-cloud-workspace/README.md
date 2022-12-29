@@ -1,15 +1,15 @@
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
-| Name | Version |
-|------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3 |
+| Name | Version  |
+|------|----------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3   |
 | <a name="requirement_tfe"></a> [tfe](#requirement\_tfe) | >= 0.40.0 |
 
 ## Providers
 
-| Name | Version |
-|------|---------|
+| Name | Version   |
+|------|-----------|
 | <a name="provider_tfe"></a> [tfe](#provider\_tfe) | >= 0.40.0 |
 
 ## Modules
