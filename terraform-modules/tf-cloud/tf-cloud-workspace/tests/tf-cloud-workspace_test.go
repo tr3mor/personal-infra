@@ -1,4 +1,4 @@
-package test
+package tests
 
 import (
 	"context"
@@ -16,8 +16,8 @@ import (
 
 const (
 	orgName           = "tr3mor"
-	retries           = 3
-	workingDirectory  = "terraform-modules/tf-cloud/tf-cloud-workspace/test"
+	retries           = 5
+	workingDirectory  = "terraform-modules/tf-cloud/tf-cloud-workspace/tests"
 	vcsRepoIdentifier = "tr3mor/personal-infra"
 )
 
@@ -25,7 +25,7 @@ func TestTfCloudWorkspace(t *testing.T) {
 	t.Parallel()
 	uniqueID := random.UniqueId()
 	now := time.Now()
-	wsName := fmt.Sprintf("unit-test-workspace-%s-%s", uniqueID, now.Format("2006-01-02-15-04-05"))
+	wsName := fmt.Sprintf("e2e-tests-workspace-%s-%s", uniqueID, now.Format("2006-01-02-15-04-05"))
 	tfeToken := os.Getenv("TFE_TOKEN")
 
 	terraformOptions := terraform.WithDefaultRetryableErrors(t, &terraform.Options{
@@ -72,12 +72,13 @@ func TestTfCloudWorkspace(t *testing.T) {
 	assert.Equal(t, true, ns.Items[0].Enabled, "Notifications not enabled by default")
 
 	// Wait for Workspace to be unlocked (first run should finish). We cant delete locked Workspace
-	for i := 0; i < 3; i++ {
-		ws, _ = client.Workspaces.Read(ctx, orgName, wsName)
-		if ws.Locked == false {
-			break
-		} else {
-			time.Sleep(30 * time.Second)
+	for i := 0; i < retries; i++ {
+		ws, err = client.Workspaces.Read(ctx, orgName, wsName)
+		if err == nil {
+			if ws.Locked == false && ws.RunsCount > 0 {
+				break
+			}
 		}
+		time.Sleep(20 * time.Second)
 	}
 }

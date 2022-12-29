@@ -1,5 +1,5 @@
 ---
-name: Terraform - Unittests
+name: Terraform - e2e
 on:  # yamllint disable-line rule:truthy
   pull_request:
 
@@ -37,5 +37,5 @@ jobs:
           OAUTH_TOKEN_ID: ${{ secrets.OAUTH_TOKEN_ID }}
         run: |
           for file in ${{ steps.changed-files-specific.outputs.all_changed_files }}; do
-            go test -v -timeout 30m ./$file/test/
+            go test -v -timeout 30m ./$file/tests/
           done
