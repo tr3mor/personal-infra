@@ -75,10 +75,10 @@ func TestTfCloudWorkspace(t *testing.T) {
 	for i := 0; i < retries; i++ {
 		ws, err = client.Workspaces.Read(ctx, orgName, wsName)
 		if err == nil {
-			if ws.Locked == false {
+			if ws.Locked == false && ws.RunsCount > 0 {
 				break
 			}
 		}
-		time.Sleep(30 * time.Second)
+		time.Sleep(20 * time.Second)
 	}
 }
