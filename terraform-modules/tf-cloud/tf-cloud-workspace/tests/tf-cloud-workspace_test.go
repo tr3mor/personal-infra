@@ -16,7 +16,7 @@ import (
 
 const (
 	orgName           = "tr3mor"
-	retries           = 6
+	retries           = 5
 	workingDirectory  = "terraform-modules/tf-cloud/tf-cloud-workspace/tests"
 	vcsRepoIdentifier = "tr3mor/personal-infra"
 )
