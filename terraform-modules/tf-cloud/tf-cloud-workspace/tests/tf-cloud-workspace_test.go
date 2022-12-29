@@ -16,7 +16,7 @@ import (
 
 const (
 	orgName           = "tr3mor"
-	retries           = 3
+	retries           = 6
 	workingDirectory  = "terraform-modules/tf-cloud/tf-cloud-workspace/tests"
 	vcsRepoIdentifier = "tr3mor/personal-infra"
 )
@@ -73,11 +73,12 @@ func TestTfCloudWorkspace(t *testing.T) {
 
 	// Wait for Workspace to be unlocked (first run should finish). We cant delete locked Workspace
 	for i := 0; i < retries; i++ {
-		ws, _ = client.Workspaces.Read(ctx, orgName, wsName)
-		if ws.Locked == false {
-			break
-		} else {
-			time.Sleep(30 * time.Second)
+		ws, err = client.Workspaces.Read(ctx, orgName, wsName)
+		if err == nil {
+			if ws.Locked == false {
+				break
+			}
 		}
+		time.Sleep(30 * time.Second)
 	}
 }
