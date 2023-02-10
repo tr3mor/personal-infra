@@ -18,7 +18,7 @@ updates:
       - actions
   - package-ecosystem: terraform
     open-pull-requests-limit: 10
-    directory: terraform/tf-cloud/workspaces
+    directory: terraform/tf-cloud/workspaces/
     schedule:
       time: "16:00"
       interval: daily
