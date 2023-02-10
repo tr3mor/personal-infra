@@ -18,7 +18,7 @@ updates:
       - actions
   - package-ecosystem: terraform
     open-pull-requests-limit: 10
-    directory: terraform/tf-cloud/
+    directory: terraform/tf-cloud/workspaces
     schedule:
       time: "16:00"
       interval: daily
@@ -46,3 +46,48 @@ updates:
     labels:
       - dependencies
       - terraform
+  - package-ecosystem: terraform
+    open-pull-requests-limit: 10
+    directory: terraform/grafana-cloud/grafana-oncall/
+    schedule:
+      time: "16:00"
+      interval: daily
+    allow:
+      - dependency-type: all
+    assignees:
+      - tr3mor
+    reviewers:
+      - tr3mor
+    labels:
+      - dependencies
+      - terraform
+  - package-ecosystem: terraform
+    open-pull-requests-limit: 10
+    directory: terraform/grafana-cloud/stack/
+    schedule:
+      time: "16:00"
+      interval: daily
+    allow:
+      - dependency-type: all
+    assignees:
+      - tr3mor
+    reviewers:
+      - tr3mor
+    labels:
+      - dependencies
+      - terraform
+  - package-ecosystem: gomod
+    open-pull-requests-limit: 10
+    directory: /
+    schedule:
+      time: "16:00"
+      interval: daily
+    allow:
+      - dependency-type: all
+    assignees:
+      - tr3mor
+    reviewers:
+      - tr3mor
+    labels:
+      - dependencies
+      - golang
