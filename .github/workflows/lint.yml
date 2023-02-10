@@ -2,6 +2,8 @@
 name: Terraform - Validate
 on: # yamllint disable-line rule:truthy
   pull_request:
+    paths:
+      - '**.tf'
 
 jobs:
   validate:
@@ -17,7 +19,7 @@ jobs:
           fetch-depth: 1
       - name: Terraform format
         run: terraform fmt -check -diff -recursive
-      - name: Run tfling
+      - name: Run tflint
         run: |
           tflint --init
           TF_DIRS=$(find . -name "*.tf" -not -path "./.git/*" -exec dirname {} \; | sort | uniq)
