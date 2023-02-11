@@ -17,8 +17,9 @@ import (
 const (
 	orgName           = "tr3mor"
 	retries           = 5
-	workingDirectory  = "terraform-modules/tf-cloud/tf-cloud-workspace/"
+	workingDirectory  = "terraform-modules/tf-cloud/tf-cloud-workspace/tests"
 	vcsRepoIdentifier = "tr3mor/personal-infra"
+	vcsRepoBranch     = "unittesting-branch"
 )
 
 func TestTfCloudWorkspace(t *testing.T) {
@@ -27,7 +28,6 @@ func TestTfCloudWorkspace(t *testing.T) {
 	now := time.Now()
 	wsName := fmt.Sprintf("e2e-tests-workspace-%s-%s", uniqueID, now.Format("2006-01-02-15-04-05"))
 	tfeToken := os.Getenv("TFE_TOKEN")
-	vcsRepoBranch := os.Getenv("GITHUB_HEAD_REF")
 
 	terraformOptions := terraform.WithDefaultRetryableErrors(t, &terraform.Options{
 		TerraformDir: "../",
