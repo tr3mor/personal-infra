@@ -17,7 +17,7 @@ import (
 const (
 	orgName           = "tr3mor"
 	retries           = 5
-	workingDirectory  = "terraform-modules/tf-cloud/tf-cloud-workspace/tests"
+	workingDirectory  = "terraform-modules/tf-cloud/tf-cloud-workspace/"
 	vcsRepoIdentifier = "tr3mor/personal-infra"
 )
 
@@ -37,7 +37,6 @@ func TestTfCloudWorkspace(t *testing.T) {
 			"working_directory":   workingDirectory,
 			"vcs_repo_identifier": vcsRepoIdentifier,
 			"vcs_repo_branch":     vcsRepoBranch,
-			"trigger_patterns":    []string{"test/*"},
 		},
 		EnvVars: map[string]string{
 			"TF_VAR_oauth_token_id": os.Getenv("OAUTH_TOKEN_ID"), // To not show it in logs
