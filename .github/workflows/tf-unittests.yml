@@ -4,7 +4,6 @@ on:  # yamllint disable-line rule:truthy
   pull_request:
     paths:
       - terraform-modules/**
-      - go.mod
 jobs:
   test:
     runs-on: ubuntu-latest
