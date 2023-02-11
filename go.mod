@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/gruntwork-io/terratest v0.41.10
-	github.com/hashicorp/go-tfe v1.16.0
+	github.com/hashicorp/go-tfe v1.18.0
 	github.com/stretchr/testify v1.8.1
 )
 
