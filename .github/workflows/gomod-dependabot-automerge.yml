@@ -1,5 +1,6 @@
+---
 name: Dependabot gomod auto-merge
-on: pull_request
+on: pull_request # yamllint disable-line rule:truthy
 
 permissions:
   contents: write
@@ -16,7 +17,9 @@ jobs:
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
       - name: Enable auto-merge for Dependabot PRs for gomod
-        if: steps.dependabot-metadata.outputs.package-ecosystem == 'go_modules'
+        if: |
+          (steps.metadata.outputs.package-ecosystem == 'go_modules') ||
+          (steps.metadata.outputs.package-ecosystem == 'github_actions')
         run: gh pr merge --auto --merge "$PR_URL"
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
