@@ -19,6 +19,7 @@ const (
 	retries           = 5
 	workingDirectory  = "terraform-modules/tf-cloud/tf-cloud-workspace/tests"
 	vcsRepoIdentifier = "tr3mor/personal-infra"
+	vcsRepoBranch     = "unittesting-branch"
 )
 
 func TestTfCloudWorkspace(t *testing.T) {
@@ -35,6 +36,7 @@ func TestTfCloudWorkspace(t *testing.T) {
 			"org_name":            orgName,
 			"working_directory":   workingDirectory,
 			"vcs_repo_identifier": vcsRepoIdentifier,
+			"vcs_repo_branch":     vcsRepoBranch,
 		},
 		EnvVars: map[string]string{
 			"TF_VAR_oauth_token_id": os.Getenv("OAUTH_TOKEN_ID"), // To not show it in logs
