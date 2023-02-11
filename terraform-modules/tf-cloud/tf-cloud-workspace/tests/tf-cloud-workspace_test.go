@@ -27,7 +27,7 @@ func TestTfCloudWorkspace(t *testing.T) {
 	now := time.Now()
 	wsName := fmt.Sprintf("e2e-tests-workspace-%s-%s", uniqueID, now.Format("2006-01-02-15-04-05"))
 	tfeToken := os.Getenv("TFE_TOKEN")
-	vcs_repo_branch := os.Getenv("GITHUB_HEAD_REF")
+	vcsRepoBranch := os.Getenv("GITHUB_HEAD_REF")
 
 	terraformOptions := terraform.WithDefaultRetryableErrors(t, &terraform.Options{
 		TerraformDir: "../",
@@ -36,7 +36,8 @@ func TestTfCloudWorkspace(t *testing.T) {
 			"org_name":            orgName,
 			"working_directory":   workingDirectory,
 			"vcs_repo_identifier": vcsRepoIdentifier,
-			"vcs_repo_branch":     vcs_repo_branch,
+			"vcs_repo_branch":     vcsRepoBranch,
+			"trigger_patterns":    []string{"test/*"},
 		},
 		EnvVars: map[string]string{
 			"TF_VAR_oauth_token_id": os.Getenv("OAUTH_TOKEN_ID"), // To not show it in logs
