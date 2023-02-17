@@ -3,7 +3,7 @@ module github.com/tr3mor/personal-infra
 go 1.19
 
 require (
-	github.com/gruntwork-io/terratest v0.41.10
+	github.com/gruntwork-io/terratest v0.41.11
 	github.com/hashicorp/go-tfe v1.18.0
 	github.com/stretchr/testify v1.8.1
 )
