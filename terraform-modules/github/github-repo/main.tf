@@ -21,7 +21,7 @@ resource "github_repository" "repo" {
 
 
   is_template = false
-  auto_init   = true
+  auto_init   = var.auto_init
 
   topics = var.topics
 

@@ -33,6 +33,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_auto_init"></a> [auto\_init](#input\_auto\_init) | Produce an initial commit in the repository | `bool` | `false` | no |
 | <a name="input_description"></a> [description](#input\_description) | Description of the repository | `string` | `""` | no |
 | <a name="input_homepage_url"></a> [homepage\_url](#input\_homepage\_url) | Homepage url for the project | `string` | `""` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name of the repository | `string` | n/a | yes |

@@ -23,7 +23,8 @@ func TestGithubRepo(t *testing.T) {
 	terraformOptions := terraform.WithDefaultRetryableErrors(t, &terraform.Options{
 		TerraformDir: "../",
 		Vars: map[string]interface{}{
-			"name": repoName,
+			"name":      repoName,
+			"auto_init": true,
 		},
 	})
 	defer terraform.Destroy(t, terraformOptions)
