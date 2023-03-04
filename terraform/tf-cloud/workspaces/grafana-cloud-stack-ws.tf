@@ -9,6 +9,8 @@ module "grafana_stack_tfe_workspace" {
   vcs_repo_identifier = "tr3mor/personal-infra"
   oauth_token_id      = tfe_oauth_client.github.oauth_token_id
 
+  trigger_patterns = ["terraform-modules/github/repos/*", "terraform/github/repos/*"]
+
   notification_email_user_ids = [data.tfe_organization_membership.admin.user_id]
   create_variable_set         = true
 }
