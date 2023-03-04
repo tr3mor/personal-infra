@@ -1,6 +1,6 @@
 module github.com/tr3mor/personal-infra
 
-go 1.19
+go 1.20
 
 require (
 	github.com/gruntwork-io/terratest v0.41.12
