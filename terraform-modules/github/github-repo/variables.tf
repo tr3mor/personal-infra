@@ -48,3 +48,9 @@ variable "pages_cname" {
   description = "The custom domain for the repository"
   default     = null
 }
+
+variable "auto_init" {
+  type        = bool
+  description = "Produce an initial commit in the repository"
+  default     = false
+}
