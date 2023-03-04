@@ -20,6 +20,6 @@ repos:
       - id: yamllint
         files: \.(yaml|yml|yamllint)$
   - repo: https://github.com/golangci/golangci-lint
-    rev: v1.50.1
+    rev: v1.51.2
     hooks:
       - id: golangci-lint

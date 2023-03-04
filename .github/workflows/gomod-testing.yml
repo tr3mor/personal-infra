@@ -24,6 +24,7 @@ jobs:
         env:
           TFE_TOKEN: ${{ secrets.TFE_TOKEN }}
           OAUTH_TOKEN_ID: ${{ secrets.OAUTH_TOKEN_ID }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           for file in $(ls -d ./terraform-modules/*/*); do
             go test -v -timeout 30m ./$file/tests/

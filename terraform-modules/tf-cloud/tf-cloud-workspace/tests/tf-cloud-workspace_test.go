@@ -26,7 +26,7 @@ func TestTfCloudWorkspace(t *testing.T) {
 	t.Parallel()
 	uniqueID := random.UniqueId()
 	now := time.Now()
-	wsName := fmt.Sprintf("e2e-tests-workspace-%s-%s", uniqueID, now.Format("2006-01-02-15-04-05"))
+	wsName := fmt.Sprintf("unit-tests-workspace-%s-%s", uniqueID, now.Format("2006-01-02-15-04-05"))
 	tfeToken := os.Getenv("TFE_TOKEN")
 
 	terraformOptions := terraform.WithDefaultRetryableErrors(t, &terraform.Options{
