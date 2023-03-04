@@ -9,6 +9,7 @@ resource "github_repository" "repo" {
   has_issues           = true
   has_projects         = false
   has_discussions      = false
+  has_downloads        = true
   vulnerability_alerts = true
 
   allow_auto_merge       = true
@@ -18,7 +19,9 @@ resource "github_repository" "repo" {
   allow_update_branch    = true
   delete_branch_on_merge = true
 
-  auto_init = true
+
+  is_template = false
+  auto_init   = true
 
   topics = var.topics
 
