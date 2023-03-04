@@ -39,7 +39,7 @@ No modules.
 | <a name="input_pages_cname"></a> [pages\_cname](#input\_pages\_cname) | The custom domain for the repository | `string` | `null` | no |
 | <a name="input_pages_enabled"></a> [pages\_enabled](#input\_pages\_enabled) | Enable Github Pages for the repo | `bool` | `false` | no |
 | <a name="input_pages_path"></a> [pages\_path](#input\_pages\_path) | The repository directory from which the site publishes | `string` | `"/"` | no |
-| <a name="input_topics"></a> [topics](#input\_topics) | List of repo topics | `list(string)` | `[]` | no |
+| <a name="input_topics"></a> [topics](#input\_topics) | List of repo topics | `list(string)` | `null` | no |
 | <a name="input_visibility"></a> [visibility](#input\_visibility) | Repo visibility level | `string` | `"public"` | no |
 
 ## Outputs

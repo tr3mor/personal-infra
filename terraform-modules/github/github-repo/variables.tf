@@ -28,7 +28,7 @@ variable "visibility" {
 variable "topics" {
   type        = list(string)
   description = "List of repo topics"
-  default     = []
+  default     = null
 }
 
 variable "pages_enabled" {
