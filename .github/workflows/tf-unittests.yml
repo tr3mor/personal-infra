@@ -5,7 +5,7 @@ on:  # yamllint disable-line rule:truthy
     paths:
       - terraform-modules/**
 jobs:
-  test:
+  tf_unittest:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
