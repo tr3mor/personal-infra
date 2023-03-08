@@ -5,7 +5,7 @@ on: # yamllint disable-line rule:truthy
     paths:
       - go.mod
 jobs:
-  test:
+  gomod_testing:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
