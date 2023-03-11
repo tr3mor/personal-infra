@@ -41,7 +41,7 @@ func TestGithubRepo(t *testing.T) {
 	assert.NoErrorf(t, err, "Failed to get repo %s: %s", repoName, err)
 	assert.True(t, *repo.AllowAutoMerge, "Automerge should be enabled by default")
 	assert.True(t, *repo.AllowSquashMerge, "SquashMerge should be enabled by default")
-	assert.True(t, *repo.AllowAutoMerge, "Automerge should be enabled by default")
+	assert.False(t, *repo.AllowMergeCommit, "MergeCommit should be disabled by default")
 	assert.True(t, *repo.DeleteBranchOnMerge, "DeleteBranchOnMerge should be enabled by default")
 
 	labels, _, err := client.Issues.ListLabels(ctx, "tr3mor", repoName, nil)
