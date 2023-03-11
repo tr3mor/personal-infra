@@ -47,7 +47,7 @@ func TestGithubRepo(t *testing.T) {
 	labels, _, err := client.Issues.ListLabels(ctx, "tr3mor", repoName, nil)
 	assert.NoErrorf(t, err, "Failed to get labels for repo %s: %s", repoName, err)
 
-	expectedLabels := []string{"actions", "ansible", "dependencies", "docker", "terraform", "go"}
+	expectedLabels := []string{"actions", "ansible", "dependencies", "docker", "terraform", "golang"}
 	for _, x := range expectedLabels {
 		assert.Truef(t, checkLabelExists(labels, x), "Label %s doesnt exist", x)
 	}

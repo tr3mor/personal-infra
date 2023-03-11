@@ -1,5 +1,5 @@
 ---
-name: Terraform - Validate
+name: Terraform lint
 on: # yamllint disable-line rule:truthy
   pull_request:
     paths:
