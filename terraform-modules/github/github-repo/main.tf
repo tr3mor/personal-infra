@@ -77,7 +77,7 @@ resource "github_issue_label" "docker" {
 resource "github_issue_label" "go" {
   repository = github_repository.repo.name
 
-  name        = "go"
+  name        = "golang"
   color       = "4CABD3"
   description = "Pull requests that update go code"
 }
