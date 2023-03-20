@@ -16,7 +16,7 @@ spec:
     path: ""
     chart: loki-stack
     repoURL: https://grafana.github.io/helm-charts
-    targetRevision: 4.8.0
+    targetRevision: 2.9.9
     helm:
       values: |-
         loki:
