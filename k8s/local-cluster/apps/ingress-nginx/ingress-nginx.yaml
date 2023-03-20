@@ -11,7 +11,7 @@ spec:
   destination:
     namespace: ingress-nginx
     server: "https://kubernetes.default.svc"
-  project: default
+  project: main
   source:
     path: ""
     chart: ingress-nginx
