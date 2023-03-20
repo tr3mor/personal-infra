@@ -1,0 +1,12 @@
+helmDefaults:
+  kubeContext: docker-desktop
+
+helmBinary: helm3
+
+repositories:
+  - name: argo
+    url: https://argoproj.github.io/argo-helm
+releases:
+  - name: argo
+    namespace: argo
+    chart: argo/argo-cd

@@ -1,0 +1,82 @@
+kind: Application
+apiVersion: argoproj.io/v1alpha1
+metadata:
+  name: kube-prometheus-stack
+  namespace: argo
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+  annotations:
+    argocd.argoproj.io/sync-wave: "5"
+spec:
+  destination:
+    namespace: monitoring
+    server: "https://kubernetes.default.svc"
+  project: default
+  source:
+    path: ""
+    chart: prometheus-community/kube-prometheus-stack
+    repoURL: https://prometheus-community.github.io/helm-charts
+    targetRevision: 39.4.0
+    helm:
+      values: |-
+        grafana:
+          image:
+            repository: grafana/grafana
+            tag: 9.0.9
+          replicas: 1
+          defaultDashboardsEnabled: true
+          admin:
+            existingSecret: local-grafana
+            userKey: GF_SECURITY_ADMIN_USER
+            passwordKey: GF_SECURITY_ADMIN_PASSWORD
+          envFromSecret: local-grafana
+          ingress:
+            enabled: "true"
+            ingressClassName: "nginx"
+            hosts:
+             - grafana.local
+          plugins:
+            - grafana-piechart-panel
+          rbac:
+            namespaced: true
+          grafana.ini:
+            database:
+              type: postgres
+              name: grafana
+              host: postgres-postgresql:5432
+              ssl_mode: disable
+            unified_alerting:
+              enabled: true
+            feature_toggles:
+              enable: serviceAccounts
+          sidecar:
+            datasources:
+              createPrometheusReplicasDatasources: true
+          serviceMonitor:
+            labels:
+              release: prometheus
+
+        prometheus:
+          ingress:
+            enabled: true
+            ingressClassName: "nginx"
+            hosts:
+              - prometheus.local
+          prometheusSpec:
+            retention: 1w
+            replicas: 1
+            affinity: {}
+
+        alertmanager:
+          ingress:
+            enabled: true
+            ingressClassName: "nginx"
+            hosts:
+              - alertmanager.local
+  syncPolicy:
+    automated:
+      selfHeal: true
+      allowEmpty: true
+      prune: true
+    syncOptions:
+      - CreateNamespace=true
