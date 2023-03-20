@@ -11,10 +11,10 @@ spec:
   destination:
     namespace: monitoring
     server: "https://kubernetes.default.svc"
-  project: default
+  project: main
   source:
     path: ""
-    chart: prometheus-community/kube-prometheus-stack
+    chart: kube-prometheus-stack
     repoURL: https://prometheus-community.github.io/helm-charts
     targetRevision: 39.4.0
     helm:
