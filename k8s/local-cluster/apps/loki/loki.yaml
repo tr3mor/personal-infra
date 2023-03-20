@@ -1,22 +1,26 @@
 kind: Application
 apiVersion: argoproj.io/v1alpha1
 metadata:
-  name: ingress-nginx
+  name: loki-stack
   namespace: argo
   finalizers:
     - resources-finalizer.argocd.argoproj.io
   annotations:
-    argocd.argoproj.io/sync-wave: "1"
+    argocd.argoproj.io/sync-wave: "5"
 spec:
   destination:
-    namespace: ingress-nginx
+    namespace: monitoring
     server: "https://kubernetes.default.svc"
   project: main
   source:
     path: ""
-    chart: ingress-nginx
-    repoURL: https://kubernetes.github.io/ingress-nginx
-    targetRevision: 4.5.2
+    chart: loki-stack
+    repoURL: https://grafana.github.io/helm-charts
+    targetRevision: 4.8.0
+    helm:
+      values: |-
+        loki:
+          isDefault: false
   syncPolicy:
     automated:
       selfHeal: true
