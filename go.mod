@@ -4,7 +4,7 @@ go 1.20
 
 require (
 	github.com/google/go-github/v50 v50.2.0
-	github.com/gruntwork-io/terratest v0.41.20
+	github.com/gruntwork-io/terratest v0.41.23
 	github.com/hashicorp/go-tfe v1.22.0
 	github.com/stretchr/testify v1.8.2
 	golang.org/x/oauth2 v0.7.0
