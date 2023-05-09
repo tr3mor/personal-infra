@@ -12,7 +12,7 @@ require (
 
 require (
 	cloud.google.com/go v0.110.1 // indirect
-	cloud.google.com/go/compute v1.19.1 // indirect
+	cloud.google.com/go/compute v1.19.2 // indirect
 	cloud.google.com/go/compute/metadata v0.2.3 // indirect
 	cloud.google.com/go/iam v1.0.1 // indirect
 	cloud.google.com/go/storage v1.30.1 // indirect
