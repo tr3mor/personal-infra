@@ -1,6 +1,6 @@
 ---
 name: gomod testing
-on: # yamllint disable-line rule:truthy
+on:  # yamllint disable-line rule:truthy
   pull_request:
     paths:
       - go.mod

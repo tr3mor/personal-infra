@@ -27,6 +27,7 @@ spec:
               existingSecret: "local-grafana"
               secretKeys:
                 userPasswordKey: "GF_DATABASE_PASSWORD"
+                adminPasswordKey: "GF_DATABASE_PASSWORD"
   syncPolicy:
     automated:
       selfHeal: true

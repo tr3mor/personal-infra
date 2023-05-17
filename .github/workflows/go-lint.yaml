@@ -1,5 +1,5 @@
 name: golangci-lint
-on:
+on:  # yamllint disable-line rule:truthy
   pull_request:
     paths:
       - '**.go'
