@@ -22,7 +22,7 @@ spec:
         grafana:
           image:
             repository: grafana/grafana
-            tag: 9.0.9
+            tag: 9.5.1
           replicas: 1
           defaultDashboardsEnabled: true
           admin:
@@ -34,7 +34,7 @@ spec:
             enabled: "true"
             ingressClassName: "nginx"
             hosts:
-             - grafana.local
+             - grafana.localdev
           plugins:
             - grafana-piechart-panel
           rbac:
@@ -61,7 +61,7 @@ spec:
             enabled: true
             ingressClassName: "nginx"
             hosts:
-              - prometheus.local
+              - prometheus.localdev
           prometheusSpec:
             retention: 1w
             replicas: 1
@@ -72,7 +72,7 @@ spec:
             enabled: true
             ingressClassName: "nginx"
             hosts:
-              - alertmanager.local
+              - alertmanager.localdev
   syncPolicy:
     automated:
       selfHeal: true
