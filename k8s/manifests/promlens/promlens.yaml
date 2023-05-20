@@ -44,7 +44,7 @@ spec:
         app.kubernetes.io/name: promlens
         app.kubernetes.io/instance: promlens
     spec:
-      serviceAccountName: promlens-promlens
+      serviceAccountName: promlens
       containers:
         - name: promlens
           image: "prom/promlens:latest"
