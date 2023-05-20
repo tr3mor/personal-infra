@@ -1,0 +1,84 @@
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: promlens
+  labels:
+    app.kubernetes.io/name: promlens
+    app.kubernetes.io/instance: promlens
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: promlens
+  labels:
+    app.kubernetes.io/name: promlens
+    app.kubernetes.io/instance: promlens
+spec:
+  type: ClusterIP
+  ports:
+    - port: 8080
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app.kubernetes.io/name: promlens
+    app.kubernetes.io/instance: promlens
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: promlens
+  labels:
+    app.kubernetes.io/name: promlens
+    app.kubernetes.io/instance: promlens
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: promlens
+      app.kubernetes.io/instance: promlens
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: promlens
+        app.kubernetes.io/instance: promlens
+    spec:
+      serviceAccountName: promlens-promlens
+      containers:
+        - name: promlens
+          image: "prom/promlens:latest"
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: promlens
+  labels:
+    app.kubernetes.io/name: promlens
+    app.kubernetes.io/instance: promlens
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: "promlens.localdev"
+      http:
+        paths:
+          - path: /
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: promlens
+                port:
+                  number: 8080
