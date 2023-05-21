@@ -10,3 +10,5 @@ releases:
   - name: argo
     namespace: argo
     chart: argo/argo-cd
+    values:
+      - values.yaml
