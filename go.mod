@@ -7,7 +7,7 @@ require (
 	github.com/gruntwork-io/terratest v0.43.0
 	github.com/hashicorp/go-tfe v1.27.0
 	github.com/stretchr/testify v1.8.4
-	golang.org/x/oauth2 v0.8.0
+	golang.org/x/oauth2 v0.9.0
 )
 
 require (
@@ -55,7 +55,7 @@ require (
 	github.com/zclconf/go-cty v1.13.2 // indirect
 	go.opencensus.io v0.24.0 // indirect
 	golang.org/x/crypto v0.10.0 // indirect
-	golang.org/x/net v0.10.0 // indirect
+	golang.org/x/net v0.11.0 // indirect
 	golang.org/x/sys v0.9.0 // indirect
 	golang.org/x/text v0.10.0 // indirect
 	golang.org/x/time v0.3.0 // indirect
