@@ -25,8 +25,8 @@ jobs:
           TF_DIRS=$(find . -name "*.tf" -not -path "./.git/*" -exec dirname {} \; | sort | uniq)
           failed=false
           for dir in $TF_DIRS; do
-              echo "Tflint $dir"
-              tflint "$dir" -f compact || failed=true;
+              echo "tflint $dir"
+              tflint --chdir "$dir" -f compact || failed=true;
           done
           if $failed
           then
