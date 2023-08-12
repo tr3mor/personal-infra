@@ -1,7 +1,7 @@
 kind: Application
 apiVersion: argoproj.io/v1alpha1
 metadata:
-  name: kube-prometheus-stack
+  name: prometheus-operator-crds
   namespace: argo
   finalizers:
     - resources-finalizer.argocd.argoproj.io
