@@ -12,7 +12,7 @@ jobs:
       - name: Install terraform
         uses: hashicorp/setup-terraform@v2.0.3
       - name: Install tflint
-        uses: terraform-linters/setup-tflint@v3
+        uses: terraform-linters/setup-tflint@v4
       - name: Checkout code
         uses: actions/checkout@v4
         with:
