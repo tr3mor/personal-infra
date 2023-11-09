@@ -7,7 +7,7 @@ require (
 	github.com/gruntwork-io/terratest v0.46.6
 	github.com/hashicorp/go-tfe v1.39.0
 	github.com/stretchr/testify v1.8.4
-	golang.org/x/oauth2 v0.13.0
+	golang.org/x/oauth2 v0.14.0
 )
 
 require (
