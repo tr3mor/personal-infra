@@ -81,6 +81,6 @@ func TestTfCloudWorkspace(t *testing.T) {
 				break
 			}
 		}
-		time.Sleep(20 * time.Second)
+		time.Sleep(time.Duration(20*i) * time.Second)
 	}
 }
