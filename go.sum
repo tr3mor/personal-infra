@@ -46,8 +46,8 @@ cloud.google.com/go/asset v1.8.0/go.mod h1:mUNGKhiqIdbr8X7KNayoYvyc4HbbFO9URsjby
 cloud.google.com/go/assuredworkloads v1.5.0/go.mod h1:n8HOZ6pff6re5KYfBXcFvSViQjDwxFkAkmUFffJRbbY=
 cloud.google.com/go/assuredworkloads v1.6.0/go.mod h1:yo2YOk37Yc89Rsd5QMVECvjaMKymF9OP+QXWlKXUkXw=
 cloud.google.com/go/assuredworkloads v1.7.0/go.mod h1:z/736/oNmtGAyU47reJgGN+KVoYoxeLBoj4XkKYscNI=
-cloud.google.com/go/auth v0.2.0 h1:y6oTcpMSbOcXbwYgUUrvI+mrQ2xbrcdpPgtVbCGTLTk=
-cloud.google.com/go/auth v0.2.0/go.mod h1:+yb+oy3/P0geX6DLKlqiGHARGR6EX2GRtYCzWOCQSbU=
+cloud.google.com/go/auth v0.2.1 h1:RMl6PI2MH1Qc3CM7XNJJHGwbC4WHQppSAjL0Cvu/M/g=
+cloud.google.com/go/auth v0.2.1/go.mod h1:khQRBNrvNoHiHhV1iu2x8fSnlNbCaVHilznW5MAI5GY=
 cloud.google.com/go/auth/oauth2adapt v0.2.0 h1:FR8zevgQwu+8CqiOT5r6xCmJa3pJC/wdXEEPF1OkNhA=
 cloud.google.com/go/auth/oauth2adapt v0.2.0/go.mod h1:AfqujpDAlTfLfeCIl/HJZZlIxD8+nJoZ5e0x1IxGq5k=
 cloud.google.com/go/automl v1.5.0/go.mod h1:34EjfoFGMZ5sgJ9EoLsRtdPSNZLcfflJR39VbVNS2M0=
