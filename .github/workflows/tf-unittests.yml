@@ -22,7 +22,7 @@ jobs:
             terraform-modules/**
       - name: Install terraform
         if: steps.changed-files-specific.outputs.any_changed == 'true'
-        uses: hashicorp/setup-terraform@v3.1.0
+        uses: hashicorp/setup-terraform@v3.1.1
       - name: Install go
         if: steps.changed-files-specific.outputs.any_changed == 'true'
         uses: actions/setup-go@v5
