@@ -10,7 +10,7 @@ terraform {
   required_providers {
     grafana = {
       source  = "grafana/grafana"
-      version = "2.18.0"
+      version = "2.19.0"
     }
   }
 }
