@@ -1,5 +1,5 @@
 ## Personal Infra
-This repo implements GitOps approach to manage my personal infra.
+This repo implements GitOps approach to manage my personal infra in cloud.
 
 Implemented using:
 - Terraform Cloud (Terraform CD)
