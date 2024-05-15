@@ -46,7 +46,7 @@ require (
 	github.com/hashicorp/go-version v1.6.0 // indirect
 	github.com/hashicorp/hcl/v2 v2.20.1 // indirect
 	github.com/hashicorp/jsonapi v1.3.1 // indirect
-	github.com/hashicorp/terraform-json v0.21.0 // indirect
+	github.com/hashicorp/terraform-json v0.22.0 // indirect
 	github.com/jinzhu/copier v0.4.0 // indirect
 	github.com/jmespath/go-jmespath v0.4.0 // indirect
 	github.com/klauspost/compress v1.17.8 // indirect
