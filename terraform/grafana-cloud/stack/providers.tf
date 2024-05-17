@@ -16,5 +16,5 @@ terraform {
 }
 
 provider "grafana" {
-  cloud_api_key = var.cloud_api_key
+  cloud_access_policy_token = var.cloud_api_key
 }
