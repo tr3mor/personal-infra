@@ -6,7 +6,7 @@ toolchain go1.22.5
 require (
 	github.com/google/go-github/v50 v50.2.0
 	github.com/gruntwork-io/terratest v0.47.1
-	github.com/hashicorp/go-tfe v1.66.0
+	github.com/hashicorp/go-tfe v1.67.0
 	github.com/stretchr/testify v1.9.0
 	golang.org/x/oauth2 v0.23.0
 )
