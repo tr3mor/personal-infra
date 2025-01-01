@@ -1,5 +1,5 @@
 helmDefaults:
-  kubeContext: docker-desktop
+  kubeContext: colima
 
 helmBinary: helm3
 
