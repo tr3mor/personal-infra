@@ -41,7 +41,7 @@ require (
 	github.com/rogpeppe/go-internal v1.13.1 // indirect
 	github.com/tmccombs/hcl2json v0.6.5 // indirect
 	github.com/ulikunitz/xz v0.5.12 // indirect
-	github.com/zclconf/go-cty v1.16.0 // indirect
+	github.com/zclconf/go-cty v1.16.1 // indirect
 	golang.org/x/crypto v0.32.0 // indirect
 	golang.org/x/mod v0.22.0 // indirect
 	golang.org/x/net v0.34.0 // indirect
