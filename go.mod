@@ -43,7 +43,7 @@ require (
 	github.com/ulikunitz/xz v0.5.12 // indirect
 	github.com/zclconf/go-cty v1.16.2 // indirect
 	golang.org/x/crypto v0.32.0 // indirect
-	golang.org/x/mod v0.22.0 // indirect
+	golang.org/x/mod v0.23.0 // indirect
 	golang.org/x/net v0.34.0 // indirect
 	golang.org/x/sync v0.10.0 // indirect
 	golang.org/x/sys v0.29.0 // indirect
