@@ -1,7 +1,7 @@
 module github.com/tr3mor/personal-infra
 
 go 1.21
-toolchain go1.22.9
+toolchain go1.23.6
 
 require (
 	github.com/google/go-github/v50 v50.2.0
@@ -42,7 +42,7 @@ require (
 	github.com/tmccombs/hcl2json v0.6.5 // indirect
 	github.com/ulikunitz/xz v0.5.12 // indirect
 	github.com/zclconf/go-cty v1.16.2 // indirect
-	golang.org/x/crypto v0.33.0 // indirect
+	golang.org/x/crypto v0.35.0 // indirect
 	golang.org/x/mod v0.23.0 // indirect
 	golang.org/x/net v0.35.0 // indirect
 	golang.org/x/sync v0.11.0 // indirect
