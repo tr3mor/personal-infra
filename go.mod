@@ -6,7 +6,7 @@ toolchain go1.23.6
 require (
 	github.com/google/go-github/v50 v50.2.0
 	github.com/gruntwork-io/terratest v0.48.2
-	github.com/hashicorp/go-tfe v1.75.0
+	github.com/hashicorp/go-tfe v1.76.0
 	github.com/stretchr/testify v1.10.0
 	golang.org/x/oauth2 v0.27.0
 )
@@ -28,7 +28,7 @@ require (
 	github.com/hashicorp/go-slug v0.16.4 // indirect
 	github.com/hashicorp/go-version v1.7.0 // indirect
 	github.com/hashicorp/hcl/v2 v2.23.0 // indirect
-	github.com/hashicorp/jsonapi v1.4.2 // indirect
+	github.com/hashicorp/jsonapi v1.4.3-0.20250220162346-81a76b606f3e // indirect
 	github.com/hashicorp/terraform-json v0.24.0 // indirect
 	github.com/jinzhu/copier v0.4.0 // indirect
 	github.com/klauspost/compress v1.18.0 // indirect
