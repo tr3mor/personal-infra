@@ -1,7 +1,7 @@
 module github.com/tr3mor/personal-infra
 
 go 1.21
-toolchain go1.23.6
+toolchain go1.24.1
 
 require (
 	github.com/google/go-github/v50 v50.2.0
@@ -25,7 +25,7 @@ require (
 	github.com/hashicorp/go-multierror v1.1.1 // indirect
 	github.com/hashicorp/go-retryablehttp v0.7.7 // indirect
 	github.com/hashicorp/go-safetemp v1.0.0 // indirect
-	github.com/hashicorp/go-slug v0.16.4 // indirect
+	github.com/hashicorp/go-slug v0.16.5 // indirect
 	github.com/hashicorp/go-version v1.7.0 // indirect
 	github.com/hashicorp/hcl/v2 v2.23.0 // indirect
 	github.com/hashicorp/jsonapi v1.4.3-0.20250220162346-81a76b606f3e // indirect
