@@ -1,6 +1,8 @@
 module github.com/tr3mor/personal-infra
 
 go 1.21
+toolchain go1.24.1
+
 require (
 	github.com/google/go-github/v50 v50.2.0
 	github.com/gruntwork-io/terratest v0.48.2
@@ -44,7 +46,7 @@ require (
 	golang.org/x/mod v0.24.0 // indirect
 	golang.org/x/net v0.38.0 // indirect
 	golang.org/x/sync v0.12.0 // indirect
-	golang.org/x/sys v0.31.0 // indirect
+	golang.org/x/sys v0.32.0 // indirect
 	golang.org/x/text v0.23.0 // indirect
 	golang.org/x/time v0.11.0 // indirect
 	golang.org/x/tools v0.31.0 // indirect
