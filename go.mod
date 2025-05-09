@@ -1,11 +1,12 @@
 module github.com/tr3mor/personal-infra
 
-go 1.21
+go 1.24
+
 toolchain go1.24.1
 
 require (
 	github.com/google/go-github/v50 v50.2.0
-	github.com/gruntwork-io/terratest v0.48.2
+	github.com/gruntwork-io/terratest v0.49.0
 	github.com/hashicorp/go-tfe v1.77.0
 	github.com/stretchr/testify v1.10.0
 	golang.org/x/oauth2 v0.29.0
