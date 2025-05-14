@@ -1,6 +1,7 @@
 module github.com/tr3mor/personal-infra
 
-go 1.21
+go 1.24
+
 toolchain go1.24.1
 
 require (
@@ -29,7 +30,7 @@ require (
 	github.com/hashicorp/go-version v1.7.0 // indirect
 	github.com/hashicorp/hcl/v2 v2.23.0 // indirect
 	github.com/hashicorp/jsonapi v1.5.0 // indirect
-	github.com/hashicorp/terraform-json v0.24.0 // indirect
+	github.com/hashicorp/terraform-json v0.25.0 // indirect
 	github.com/jinzhu/copier v0.4.0 // indirect
 	github.com/klauspost/compress v1.18.0 // indirect
 	github.com/kr/pretty v0.3.1 // indirect
