@@ -1,7 +1,8 @@
 module github.com/tr3mor/personal-infra
 
-go 1.21
-toolchain go1.24.1
+go 1.24
+
+toolchain go1.24.4
 
 require (
 	github.com/google/go-github/v50 v50.2.0

@@ -5,7 +5,6 @@ resource "tfe_workspace" "tfe" {
 
   terraform_version     = var.terraform_version
   working_directory     = var.working_directory
-  execution_mode        = var.execution_mode
   auto_apply            = var.auto_apply
   queue_all_runs        = true
   allow_destroy_plan    = false

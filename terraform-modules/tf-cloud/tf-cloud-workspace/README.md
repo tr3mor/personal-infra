@@ -32,7 +32,6 @@ No modules.
 | <a name="input_auto_apply"></a> [auto\_apply](#input\_auto\_apply) | Enable autoapply for workspace | `bool` | `true` | no |
 | <a name="input_create_variable_set"></a> [create\_variable\_set](#input\_create\_variable\_set) | Whether variable set should be created for this workspace | `bool` | `false` | no |
 | <a name="input_description"></a> [description](#input\_description) | A description for the workspace | `string` | `""` | no |
-| <a name="input_execution_mode"></a> [execution\_mode](#input\_execution\_mode) | Execution mode for workspace | `string` | `"remote"` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name of the workspace | `string` | n/a | yes |
 | <a name="input_notification_email_user_ids"></a> [notification\_email\_user\_ids](#input\_notification\_email\_user\_ids) | List of emails to send notifications to | `list(string)` | `[]` | no |
 | <a name="input_notification_enabled"></a> [notification\_enabled](#input\_notification\_enabled) | Whether email notification should be enabled for this workspace | `bool` | `true` | no |
