@@ -31,12 +31,6 @@ variable "auto_apply" {
   description = "Enable autoapply for workspace"
 }
 
-variable "execution_mode" {
-  type        = string
-  default     = "remote"
-  description = "Execution mode for workspace"
-}
-
 variable "vcs_repo_identifier" {
   type        = string
   description = "Github repo identifier"
@@ -70,6 +64,7 @@ variable "notification_email_user_ids" {
   type        = list(string)
   default     = []
   description = "List of emails to send notifications to"
+  nullable    = true
 }
 
 variable "create_variable_set" {

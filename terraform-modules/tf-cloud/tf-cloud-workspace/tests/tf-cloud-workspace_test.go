@@ -32,11 +32,12 @@ func TestTfCloudWorkspace(t *testing.T) {
 	terraformOptions := terraform.WithDefaultRetryableErrors(t, &terraform.Options{
 		TerraformDir: "../",
 		Vars: map[string]interface{}{
-			"name":                wsName,
-			"org_name":            orgName,
-			"working_directory":   workingDirectory,
-			"vcs_repo_identifier": vcsRepoIdentifier,
-			"vcs_repo_branch":     vcsRepoBranch,
+			"name":                        wsName,
+			"org_name":                    orgName,
+			"working_directory":           workingDirectory,
+			"vcs_repo_identifier":         vcsRepoIdentifier,
+			"vcs_repo_branch":             vcsRepoBranch,
+			"notification_email_user_ids": nil,
 		},
 		EnvVars: map[string]string{
 			"TF_VAR_oauth_token_id": os.Getenv("OAUTH_TOKEN_ID"), // To not show it in logs
