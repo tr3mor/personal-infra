@@ -28,7 +28,7 @@ require (
 	github.com/hashicorp/go-safetemp v1.0.0 // indirect
 	github.com/hashicorp/go-slug v0.16.5 // indirect
 	github.com/hashicorp/go-version v1.7.0 // indirect
-	github.com/hashicorp/hcl/v2 v2.23.0 // indirect
+	github.com/hashicorp/hcl/v2 v2.24.0 // indirect
 	github.com/hashicorp/jsonapi v1.5.0 // indirect
 	github.com/hashicorp/terraform-json v0.24.0 // indirect
 	github.com/jinzhu/copier v0.4.0 // indirect
@@ -42,7 +42,7 @@ require (
 	github.com/rogpeppe/go-internal v1.14.1 // indirect
 	github.com/tmccombs/hcl2json v0.6.7 // indirect
 	github.com/ulikunitz/xz v0.5.12 // indirect
-	github.com/zclconf/go-cty v1.16.2 // indirect
+	github.com/zclconf/go-cty v1.16.3 // indirect
 	golang.org/x/crypto v0.39.0 // indirect
 	golang.org/x/mod v0.25.0 // indirect
 	golang.org/x/net v0.41.0 // indirect
