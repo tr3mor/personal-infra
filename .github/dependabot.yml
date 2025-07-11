@@ -11,8 +11,6 @@ updates:
       - dependency-type: all
     assignees:
       - tr3mor
-    reviewers:
-      - tr3mor
     labels:
       - dependencies
       - actions
@@ -25,8 +23,6 @@ updates:
     allow:
       - dependency-type: all
     assignees:
-      - tr3mor
-    reviewers:
       - tr3mor
     labels:
       - dependencies
@@ -41,8 +37,6 @@ updates:
       - dependency-type: all
     assignees:
       - tr3mor
-    reviewers:
-      - tr3mor
     labels:
       - dependencies
       - terraform
@@ -55,8 +49,6 @@ updates:
     allow:
       - dependency-type: all
     assignees:
-      - tr3mor
-    reviewers:
       - tr3mor
     labels:
       - dependencies
@@ -71,8 +63,6 @@ updates:
       - dependency-type: all
     assignees:
       - tr3mor
-    reviewers:
-      - tr3mor
     labels:
       - dependencies
       - terraform
@@ -85,8 +75,6 @@ updates:
     allow:
       - dependency-type: all
     assignees:
-      - tr3mor
-    reviewers:
       - tr3mor
     labels:
       - dependencies
