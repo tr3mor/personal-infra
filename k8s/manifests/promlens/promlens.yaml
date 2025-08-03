@@ -47,7 +47,7 @@ spec:
       serviceAccountName: promlens
       containers:
         - name: promlens
-          image: "prom/promlens:latest"
+          image: "prom/promlens:v0.3.0"
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
