@@ -2,7 +2,7 @@
 
 A GitOps-based personal infrastructure setup that I maintain in my free time. This repo manages my cloud resources, local Kubernetes cluster, and various tools I use for personal projects.
 
-## What this does
+### What this does
 
 This repository implements a GitOps approach to manage my personal infrastructure across different platforms.
 
