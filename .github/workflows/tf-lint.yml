@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install terraform
-        uses: hashicorp/setup-terraform@v3.1.2
+        uses: hashicorp/setup-terraform@v4.0.0
       - name: Install tflint
         uses: terraform-linters/setup-tflint@v6
       - name: Checkout code
