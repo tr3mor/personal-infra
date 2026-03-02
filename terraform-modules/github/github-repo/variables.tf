@@ -37,6 +37,16 @@ variable "pages_enabled" {
   default     = false
 }
 
+variable "pages_build_type" {
+  type        = string
+  description = "The type of GitHub Pages build. Can be 'legacy' or 'workflow'"
+  default     = "legacy"
+  validation {
+    condition     = contains(["legacy", "workflow"], var.pages_build_type)
+    error_message = "pages_build_type must be 'legacy' or 'workflow'"
+  }
+}
+
 variable "pages_path" {
   type        = string
   description = "The repository directory from which the site publishes"

@@ -28,9 +28,13 @@ resource "github_repository" "repo" {
   dynamic "pages" {
     for_each = var.pages_enabled ? [true] : []
     content {
-      source {
-        branch = "main"
-        path   = var.pages_path
+      build_type = var.pages_build_type
+      dynamic "source" {
+        for_each = var.pages_build_type == "legacy" ? [true] : []
+        content {
+          branch = "main"
+          path   = var.pages_path
+        }
       }
       cname = var.pages_cname
     }
@@ -40,6 +44,18 @@ resource "github_repository" "repo" {
 resource "github_branch_default" "branch" {
   repository = github_repository.repo.name
   branch     = "main"
+}
+
+resource "github_branch_protection" "main" {
+  repository_id = github_repository.repo.node_id
+  pattern       = "main"
+
+  allows_deletions    = false
+  allows_force_pushes = false
+
+  required_pull_request_reviews {
+    required_approving_review_count = 0
+  }
 }
 
 resource "github_issue_label" "actions" {

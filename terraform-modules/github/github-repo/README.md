@@ -4,13 +4,13 @@
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3 |
-| <a name="requirement_github"></a> [github](#requirement\_github) | ~> 5.0 |
+| <a name="requirement_github"></a> [github](#requirement\_github) | ~> 6.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_github"></a> [github](#provider\_github) | ~> 5.0 |
+| <a name="provider_github"></a> [github](#provider\_github) | ~> 6.0 |
 
 ## Modules
 
@@ -21,6 +21,7 @@ No modules.
 | Name | Type |
 |------|------|
 | [github_branch_default.branch](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/branch_default) | resource |
+| [github_branch_protection.main](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/branch_protection) | resource |
 | [github_issue_label.actions](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/issue_label) | resource |
 | [github_issue_label.ansible](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/issue_label) | resource |
 | [github_issue_label.dependencies](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/issue_label) | resource |
@@ -37,6 +38,7 @@ No modules.
 | <a name="input_description"></a> [description](#input\_description) | Description of the repository | `string` | `""` | no |
 | <a name="input_homepage_url"></a> [homepage\_url](#input\_homepage\_url) | Homepage url for the project | `string` | `""` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name of the repository | `string` | n/a | yes |
+| <a name="input_pages_build_type"></a> [pages\_build\_type](#input\_pages\_build\_type) | The type of GitHub Pages build. Can be 'legacy' or 'workflow' | `string` | `"legacy"` | no |
 | <a name="input_pages_cname"></a> [pages\_cname](#input\_pages\_cname) | The custom domain for the repository | `string` | `null` | no |
 | <a name="input_pages_enabled"></a> [pages\_enabled](#input\_pages\_enabled) | Enable Github Pages for the repo | `bool` | `false` | no |
 | <a name="input_pages_path"></a> [pages\_path](#input\_pages\_path) | The repository directory from which the site publishes | `string` | `"/"` | no |
