@@ -21,6 +21,8 @@ spec:
       values: |-
         global:
           imageRegistry: gallery.ecr.aws
+          security:
+            allowInsecureImages: true
           postgresql:
             auth:
               username: "grafana"
