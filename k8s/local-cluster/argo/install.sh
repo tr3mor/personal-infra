@@ -15,6 +15,9 @@ kubectl create secret generic local-grafana -n monitoring --context=colima  --fr
     --from-literal=GF_SECURITY_ADMIN_USER=grafana \
     --from-literal=GF_DATABASE_PASSWORD="$GRAFANA_DB_PASS" \
     --from-literal=GF_SECURITY_ADMIN_PASSWORD="$GRAFANA_ADMIN_PASS"
+kubectl create secret generic grafana-db-secret -n monitoring --context=colima \
+    --from-literal=username=grafana \
+    --from-literal=password="$GRAFANA_DB_PASS"
 kubectl apply -f bootstrap.yaml --context=colima
 kubectl apply -f ingress.yaml --context=colima
 echo "Argo admin password is $(kubectl get secret argocd-initial-admin-secret -n argo --context=colima -o=jsonpath='{.data.password}' | base64 --decode)"

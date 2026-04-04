@@ -44,7 +44,7 @@ spec:
             database:
               type: postgres
               name: grafana
-              host: postgres-postgresql:5432
+              host: postgres-rw:5432
               ssl_mode: disable
             unified_alerting:
               enabled: true
