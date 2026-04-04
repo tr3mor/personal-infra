@@ -16,10 +16,11 @@ spec:
     path: ""
     chart: postgresql
     repoURL: https://charts.bitnami.com/bitnami
-    targetRevision: 16.7.21
+    targetRevision: 18.5.14
     helm:
       values: |-
         global:
+          imageRegistry: gallery.ecr.aws
           postgresql:
             auth:
               username: "grafana"
