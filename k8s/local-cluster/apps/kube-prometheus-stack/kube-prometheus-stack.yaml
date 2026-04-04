@@ -33,7 +33,7 @@ spec:
           envFromSecret: local-grafana
           ingress:
             enabled: "true"
-            ingressClassName: "nginx"
+            ingressClassName: "traefik"
             hosts:
              - grafana.localdev
           plugins:
@@ -60,7 +60,7 @@ spec:
         prometheus:
           ingress:
             enabled: true
-            ingressClassName: "nginx"
+            ingressClassName: "traefik"
             hosts:
               - prometheus.localdev
           prometheusSpec:
@@ -71,7 +71,7 @@ spec:
         alertmanager:
           ingress:
             enabled: true
-            ingressClassName: "nginx"
+            ingressClassName: "traefik"
             hosts:
               - alertmanager.localdev
   syncPolicy:
