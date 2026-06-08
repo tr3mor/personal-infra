@@ -7,7 +7,7 @@ module "github_repos_tfe_workspace" {
 
   working_directory   = "terraform/github/repos"
   vcs_repo_identifier = "tr3mor/personal-infra"
-  oauth_token_id      = tfe_oauth_client.github.oauth_token_id
+  oauth_token_id      = data.tfe_oauth_client.github.oauth_token_id
 
   trigger_patterns = ["terraform-modules/github/github-repo/*", "terraform/github/repos/*"]
 

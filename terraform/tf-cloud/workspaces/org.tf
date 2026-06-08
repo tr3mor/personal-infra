@@ -10,13 +10,9 @@ resource "tfe_organization" "tr3mor" {
   collaborator_auth_policy = "two_factor_mandatory"
 }
 
-resource "tfe_oauth_client" "github" {
-  name             = "github-client"
-  organization     = local.org_name
-  api_url          = "https://api.github.com"
-  http_url         = "https://github.com"
-  oauth_token      = var.github_oauth_token
-  service_provider = "github"
+data "tfe_oauth_client" "github" {
+  organization = local.org_name
+  name         = "github"
 }
 
 resource "tfe_variable_set" "global" {
