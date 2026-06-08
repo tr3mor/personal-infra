@@ -7,7 +7,7 @@ module "grafana_oncall_tfe_workspace" {
 
   working_directory   = "terraform/grafana-cloud/grafana-oncall"
   vcs_repo_identifier = "tr3mor/personal-infra"
-  oauth_token_id      = tfe_oauth_client.github.oauth_token_id
+  oauth_token_id      = data.tfe_oauth_client.github.oauth_token_id
 
   notification_email_user_ids = [data.tfe_organization_membership.admin.user_id]
 }
