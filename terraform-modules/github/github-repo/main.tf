@@ -5,12 +5,10 @@ resource "github_repository" "repo" {
 
   visibility = var.visibility
 
-  has_wiki             = false
-  has_issues           = true
-  has_projects         = false
-  has_discussions      = false
-  has_downloads        = true
-  vulnerability_alerts = true
+  has_wiki        = false
+  has_issues      = true
+  has_projects    = false
+  has_discussions = false
 
   allow_auto_merge       = true
   allow_merge_commit     = false
@@ -39,6 +37,11 @@ resource "github_repository" "repo" {
       cname = var.pages_cname
     }
   }
+}
+
+resource "github_repository_vulnerability_alerts" "repo" {
+  repository = github_repository.repo.name
+  enabled    = true
 }
 
 resource "github_branch_default" "branch" {
