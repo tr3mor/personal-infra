@@ -56,6 +56,14 @@ resource "github_branch_protection" "main" {
   required_pull_request_reviews {
     required_approving_review_count = 0
   }
+
+  dynamic "required_status_checks" {
+    for_each = length(var.required_status_checks) > 0 ? [1] : []
+    content {
+      strict   = true
+      contexts = var.required_status_checks
+    }
+  }
 }
 
 resource "github_issue_label" "actions" {

@@ -64,3 +64,9 @@ variable "auto_init" {
   description = "Produce an initial commit in the repository"
   default     = false
 }
+
+variable "required_status_checks" {
+  type        = list(string)
+  description = "CI check contexts that must pass before merging to main. Leave empty to not require any."
+  default     = []
+}
