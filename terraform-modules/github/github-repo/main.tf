@@ -5,12 +5,10 @@ resource "github_repository" "repo" {
 
   visibility = var.visibility
 
-  has_wiki             = false
-  has_issues           = true
-  has_projects         = false
-  has_discussions      = false
-  has_downloads        = true
-  vulnerability_alerts = true
+  has_wiki        = false
+  has_issues      = true
+  has_projects    = false
+  has_discussions = false
 
   allow_auto_merge       = true
   allow_merge_commit     = false
@@ -41,6 +39,11 @@ resource "github_repository" "repo" {
   }
 }
 
+resource "github_repository_vulnerability_alerts" "repo" {
+  repository = github_repository.repo.name
+  enabled    = true
+}
+
 resource "github_branch_default" "branch" {
   repository = github_repository.repo.name
   branch     = "main"
@@ -55,6 +58,14 @@ resource "github_branch_protection" "main" {
 
   required_pull_request_reviews {
     required_approving_review_count = 0
+  }
+
+  dynamic "required_status_checks" {
+    for_each = length(var.required_status_checks) > 0 ? [1] : []
+    content {
+      strict   = true
+      contexts = var.required_status_checks
+    }
   }
 }
 
